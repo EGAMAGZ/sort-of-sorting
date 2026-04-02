@@ -1,11 +1,11 @@
 {
   "name": "@egamagz/sort-of-sorting",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "exports": "./mod.ts",
   "fmt": {
     "semiColons": false,
     "singleQuote": true,
-    "trailingCommas": "always"
+    "trailingCommas": "onlyMultiLine"
   },
   "lint": {
     "rules": {
