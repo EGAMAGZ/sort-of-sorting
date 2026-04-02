@@ -1,11 +1,11 @@
 /**
  * Checks if an array is sorted in ascending order.
- * @param array - The array to check (hopefully it's sorted by now)
+ * @param items - The array to check (hopefully it's sorted by now)
  * @returns `true` if the array is sorted, `false` otherwise
  */
-function isSorted(array: readonly number[]): boolean {
-  for (let i = 1; i < array.length; i++) {
-    if (array[i - 1] > array[i]) {
+function isSorted(items: readonly number[]): boolean {
+  for (let i = 1; i < items.length; i++) {
+    if (items[i - 1] > items[i]) {
       return false;
     }
   }
@@ -40,7 +40,7 @@ function shuffle(array: readonly number[]): number[] {
  * Repeatedly shuffles the array until it becomes sorted.
  * WARNING: Extremely inefficient with O(n!) time complexity. May cause your computer to question its life choices.
  *
- * @param array - The array to sort
+ * @param items - The array to sort
  * @returns A new sorted array (eventually, maybe)
  * @remarks
  * Bogo sort works by generating random arrangements until one happens
@@ -48,14 +48,21 @@ function shuffle(array: readonly number[]): number[] {
  * and sometimes that's enough. The universe has been running bogo sort
  * on the cosmos for 13.8 billion years and we're still waiting.
  *
+ * Use cases:
+ * - Proving a point in a coding interview (spoiler: it's a bad point)
+ * - Sorting extremely small arrays where nobody will notice the heat death of the universe
+ * - When you want to watch your CPU fan spin dramatically
+ * - Generating random numbers by pretending they're sorted arrays
+ * - Randomly shuffling an array and hoping for the best (which is what you're doing anyway)
+ *
  * @example
  * ```ts
  * import { bogoSort } from "@egamagz/sort-of-sorting"
  * bogoSort([3, 1, 2]) // Returns [1, 2, 3]... eventually
  * ```
  */
-export function bogoSort(array: readonly number[]): number[] {
-  let result = [...array];
+export function bogoSort(items: readonly number[]): number[] {
+  let result = [...items];
 
   while (!isSorted(result)) {
     result = shuffle(result);
