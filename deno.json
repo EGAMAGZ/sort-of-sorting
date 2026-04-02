@@ -1,9 +1,8 @@
 {
   "name": "@egamagz/sort-of-sorting",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "exports": "./mod.ts",
   "fmt": {
-    "semiColons": false,
     "singleQuote": true,
     "trailingCommas": "onlyMultiLine"
   },

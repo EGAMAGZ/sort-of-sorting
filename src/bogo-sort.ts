@@ -6,10 +6,10 @@
 function isSorted(array: readonly number[]): boolean {
   for (let i = 1; i < array.length; i++) {
     if (array[i - 1] > array[i]) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }
 
 /**
@@ -20,19 +20,19 @@ function isSorted(array: readonly number[]): boolean {
  * @returns A new array with elements in random order
  */
 function shuffle(array: readonly number[]): number[] {
-  const result = [...array]
-  let count = result.length
+  const result = [...array];
+  let count = result.length;
 
   while (count > 0) {
-    const randomIndex = Math.floor(Math.random() * count)
-    count--
+    const randomIndex = Math.floor(Math.random() * count);
+    count--;
 
-    const temp = result[count]
-    result[count] = result[randomIndex]
-    result[randomIndex] = temp
+    const temp = result[count];
+    result[count] = result[randomIndex];
+    result[randomIndex] = temp;
   }
 
-  return result
+  return result;
 }
 
 /**
@@ -55,11 +55,11 @@ function shuffle(array: readonly number[]): number[] {
  * ```
  */
 export function bogoSort(array: readonly number[]): number[] {
-  let result = [...array]
+  let result = [...array];
 
   while (!isSorted(result)) {
-    result = shuffle(result)
+    result = shuffle(result);
   }
 
-  return result
+  return result;
 }
