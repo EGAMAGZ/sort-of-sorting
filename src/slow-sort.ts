@@ -28,23 +28,23 @@
  * ```
  */
 export function slowSort(items: readonly number[]): number[] {
-  const sorted = [...items]
+  const sorted = [...items];
 
   function sort(left: number, right: number): void {
-    if (left >= right) return
+    if (left >= right) return;
 
-    const middle = (left + right) >> 1
+    const middle = (left + right) >> 1;
 
-    sort(left, middle)
-    sort(middle + 1, right)
+    sort(left, middle);
+    sort(middle + 1, right);
 
     if (sorted[middle] > sorted[right]) {
-      ;[sorted[middle], sorted[right]] = [sorted[right], sorted[middle]]
+      [sorted[middle], sorted[right]] = [sorted[right], sorted[middle]];
     }
 
-    sort(left, right - 1)
+    sort(left, right - 1);
   }
 
-  sort(0, sorted.length - 1)
-  return sorted
+  sort(0, sorted.length - 1);
+  return sorted;
 }

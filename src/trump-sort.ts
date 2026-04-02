@@ -16,6 +16,6 @@
  * ```
  */
 export function trumpSort(array: readonly number[]): number[] {
-  const result = [...array]
-  return result
+  const result = [...array];
+  return result;
 }
