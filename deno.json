@@ -2,6 +2,7 @@
   "name": "@egamagz/sort-of-sorting",
   "version": "0.5.0",
   "exports": "./mod.ts",
+  "license": "MIT",
   "fmt": {
     "singleQuote": true,
     "trailingCommas": "onlyMultiLine"
