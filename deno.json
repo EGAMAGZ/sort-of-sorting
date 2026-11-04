@@ -1,6 +1,6 @@
 {
   "name": "@egamagz/sort-of-sorting",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "exports": "./mod.ts",
   "license": "MIT",
   "fmt": {
