@@ -11,5 +11,10 @@
     "rules": {
       "tags": ["recommended", "jsr"]
     }
+  },
+  "publish": {
+    "exclude": [
+      ".github/"
+    ]
   }
 }
